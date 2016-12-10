@@ -13,17 +13,18 @@ in your project and write a single lines of code to perform three operation logi
 	    For facebook login
 	
 	
-                socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.FACEBOOK, ConnectionType.LOGIN)
-                    .setSocialConnection(this).build();
+                   socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.FACEBOOK,    							ConnectionType.LOGIN)
+                    			.setSocialConnection(this).build();
 					
 					
 					
 					
       
 	    For google login
+	    
 	  
                  socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.GPLUS, ConnectionType.LOGIN)
-                    .setSocialConnection(this).build();
+                    			.setSocialConnection(this).build();
 					
 					
 					
