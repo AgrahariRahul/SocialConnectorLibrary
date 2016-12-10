@@ -7,3 +7,37 @@ This library can perform login , sharing and app invite features on facebook, go
 
 
 Remember: Enable Google Sign In for this application for use of google login. link "https://developers.google.com/mobile/add?platform=android&cntapi=signin&cnturl=https:%2F%2Fdevelopers.google.com%2Fidentity%2Fsign-in%2Fandroid%2Fsign-in%3Fconfigured%3Dtrue&cntlbl=Continue%20Adding%20Sign-In"
+
+
+
+
+
+
+
+
+For facebook login
+	
+	
+             socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.FACEBOOK, ConnectionType.LOGIN)
+                              .setSocialConnection(this).build();
+					
+					
+					
+					
+      
+For google login
+	  
+              socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.GPLUS, ConnectionType.LOGIN)
+                                 .setSocialConnection(this).build();
+					
+					
+					
+					
+					
+
+For twitter login
+       
+              socialConnector = new SocialConnector.SocialBuilder(MainActivity.this, SocialConnection.TWITTER, ConnectionType.LOGIN)
+                               .setConsumerKey("enter consumer key")
+                                .setConsumerSecret("enter consumer secret").setSocialConnection(this).build();
+					
