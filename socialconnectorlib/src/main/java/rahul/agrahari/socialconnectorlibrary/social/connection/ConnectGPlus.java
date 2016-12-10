@@ -206,7 +206,6 @@ public class ConnectGPlus {
     private void appInvite(String appname, String invitetext, String applinkurl) {
         if (applinkurl == null && applinkurl.trim().length() == 0)
             throw new IllegalArgumentException(" Invite link is empty or null");
-
         PlusShare.Builder builder = new PlusShare.Builder((Activity) mContext);
         builder.setType("text/plain");
         builder.addCallToAction("INSTALL", Uri.parse(applinkurl), "");
@@ -216,7 +215,7 @@ public class ConnectGPlus {
         Intent shareIntent = builder.getIntent();
 
         if (mContext.getPackageManager().resolveActivity(shareIntent, 0) == null)
-            throw new ActivityNotFoundException("not find Google Plus application in this device.");
+            throw new ActivityNotFoundException("Not find Google Plus Application.");
 
         ((Activity) mContext).startActivityForResult(shareIntent, REQ_APP_INVITE);
     }

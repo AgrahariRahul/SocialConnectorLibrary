@@ -113,12 +113,12 @@ public class TwitterAppInviteDialog extends Dialog implements View.OnClickListen
 
         TextView textView1 = new TextView(mContext);
         LinearLayout.LayoutParams textparams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        textparams.setMargins(10, 5, 5, 5);
+        textparams.setMargins(10, 5, 5, 10);
         textView1.setLayoutParams(textparams);
         textView1.setText(appName);
         textView1.setTextAppearance(mContext, android.R.style.TextAppearance_DeviceDefault_Small);
-        textView1.setTypeface(null, Typeface.BOLD);
         textView1.setTextColor(Color.BLACK);
+        textView1.setTypeface(null, Typeface.BOLD);
 
 
         TextView textView2 = new TextView(mContext);

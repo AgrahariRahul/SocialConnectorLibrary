@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">SocialConnectorLibrary</string>
+    <string name="app_name">SocialConnectorSample</string>
+    <string name="fb_app_url">enter facebook app link url</string>
+    <string name="facebook_app_id">enter facebook app id</string>
+    <string name="consumer_key">enter twitter consumer key</string>
+    <string name="consumer_secret">enter twitter consumer secret</string>
 </resources>

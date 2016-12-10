@@ -72,7 +72,7 @@ public class ConnectTwitter {
 
     private String mAppName;
 
-    private String mAppLinkUrl;
+    private String mApplinkUrl;
 
 
     private RequestToken requestToken;
@@ -94,7 +94,7 @@ public class ConnectTwitter {
         this.mConsumerKey = mSocialConnector.getConsumerKey();
         this.mConsumerSecret = mSocialConnector.getConsumerSecret();
         this.mUrl = mSocialConnector.getUrl();
-        this.mAppLinkUrl = mSocialConnector.getAppLinkUrl();
+        this.mApplinkUrl = mSocialConnector.getAppLinkUrl();
         this.mCaption = mSocialConnector.getCaption();
         this.mDescription = mSocialConnector.getDescription();
         this.mPackageName = mSocialConnector.getPackageName();
@@ -282,7 +282,7 @@ public class ConnectTwitter {
         boolean isInvite;
         Twitter twitter = getTwitterInstance();
         try {
-            StatusUpdate statusUpdate = new StatusUpdate("You can install this app from" + mAppLinkUrl);
+            StatusUpdate statusUpdate = new StatusUpdate("You can install this app " + mApplinkUrl);
             if (getMediaFile() != null) {
                 statusUpdate.setMedia(getMediaFile());
             }
@@ -305,7 +305,7 @@ public class ConnectTwitter {
     private AsyncTask<Void, Void, Boolean> appInviteTask = new AsyncTask<Void, Void, Boolean>() {
         @Override
         protected Boolean doInBackground(Void... params) {
-            if (mAppLinkUrl == null && mAppLinkUrl.equals(""))
+            if (mApplinkUrl == null || mApplinkUrl.equals(""))
                 throw new IllegalArgumentException("application link is null or empty");
             return appInvite();
         }
